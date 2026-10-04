@@ -520,6 +520,26 @@ body {
 
 /* ---------- Celulares ---------- */
 @media (max-width: 700px) {
+  .pie {
+    text-align: center;
+  }
+
+  .pie-contenido {
+    justify-items: center;
+  }
+
+  .pie-columna {
+    width: 100%;
+  }
+
+  .pie-redes li {
+    justify-content: center;
+  }
+
+  .pie .logo {
+    justify-content: center;
+  }
+
   .encabezado {
     flex-direction: column;
     justify-content: center;
