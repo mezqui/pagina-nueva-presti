@@ -113,6 +113,8 @@ body {
 
 .carrusel-pista {
   display: flex;
+  align-items: center;
+  gap: 12px;
   width: 100%;
   max-width: none;
   margin: 0 auto;
@@ -122,27 +124,51 @@ body {
   flex: 1;
   min-width: 0;
   aspect-ratio: 9 / 16;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  filter: brightness(0.6);
-  transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease, border-radius 0.35s ease;
-}
-
-.carrusel-pista img:first-child {
-  border-radius: 16px 0 0 16px;
-}
-
-.carrusel-pista img:last-child {
-  border-radius: 0 16px 16px 0;
+  padding: 8px;
+  background: #f3f3f3;
+  border-radius: 16px;
+  filter: brightness(0.72);
+  transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
 }
 
 .carrusel-pista img:hover {
   position: relative;
   z-index: 2;
-  transform: scale(1.15);
+  transform: scale(1.12);
   filter: brightness(1);
-  border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- WhatsApp flotante ---------- */
+.whatsapp-flotante {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  color: #ffffff;
+  background: #20d466;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.whatsapp-flotante svg {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+.whatsapp-flotante:hover,
+.whatsapp-flotante:focus-visible {
+  background: #18b957;
+  transform: scale(1.08);
+  outline: none;
 }
 
 /* ---------- Oferta (texto + imagen redonda) ---------- */
@@ -553,26 +579,39 @@ body {
     height: 200px;
   }
 
-  /* El carrusel se desliza con el dedo */
+  /* En móvil, las promociones se leen una debajo de otra. */
   .carrusel-pista {
-    overflow-x: auto;
-    gap: 12px;
-    padding: 20px 0;
-    scroll-snap-type: x mandatory;
+    flex-direction: column;
+    gap: 18px;
+    padding: 8px 0;
   }
 
   .carrusel-pista img,
   .carrusel-pista img:first-child,
   .carrusel-pista img:last-child {
-    flex: 0 0 60%;
+    flex: none;
+    width: min(100%, 340px);
+    height: auto;
     border-radius: 16px;
     filter: none;
-    scroll-snap-align: center;
+    margin: 0 auto;
   }
 
   .carrusel-pista img:hover {
     transform: none;
     box-shadow: none;
+  }
+
+  .whatsapp-flotante {
+    right: 16px;
+    bottom: 16px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .whatsapp-flotante svg {
+    width: 36px;
+    height: 36px;
   }
 }
 
