@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mezqui.github.io/pagina-nueva-presti/sitemap.xml
