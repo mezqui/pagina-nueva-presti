@@ -360,6 +360,17 @@ body {
   background: #25a244;
 }
 
+@media (min-width: 801px) {
+  .sedes-lista {
+    max-width: 960px;
+  }
+
+  .sede {
+    min-height: 315px;
+    padding: 66px 18px 26px;
+  }
+}
+
 /* ---------- Contacto (formulario) ---------- */
 .contacto {
   padding: 0;
