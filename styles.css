@@ -72,14 +72,15 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 340px;
+  min-height: 400px;
   padding: 0;
   background: #d4d4d4;
   overflow: hidden;
 }
 
 .hero-imagen {
-  height: 92%;
+  height: 100%;
+  max-height: 400px;
   width: auto;
   align-self: end;
   justify-self: center;
@@ -87,7 +88,8 @@ body {
 
 .hero-texto {
   text-align: center;
-  padding: 0 6%;
+  padding: 0 8%;
+  transform: translateY(-8px);
 }
 
 .hero-texto h1 {
@@ -106,12 +108,13 @@ body {
 
 /* ---------- Carrusel ---------- */
 .carrusel {
-  padding: 60px 6%;
+  padding: 60px 3%;
 }
 
 .carrusel-pista {
   display: flex;
-  max-width: 860px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
 }
 
